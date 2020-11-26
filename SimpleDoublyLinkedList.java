@@ -62,10 +62,9 @@ class SimpleDoublyLinkedList<E> implements SimpleLinkedList<E> {
         }
 
         if (index == size) {            //insert at last position
-            Node<E> l = tail;
             newNode.prev = tail;
-            tail = newNode;
             l.next = newNode;
+            tail = newNode;
 
             size++;
             return;
